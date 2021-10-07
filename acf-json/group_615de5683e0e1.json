@@ -22,29 +22,10 @@
             "delay": 0
         },
         {
-            "key": "field_615de58527e79",
-            "label": "Section Header",
-            "name": "section_header",
-            "type": "text",
-            "instructions": "Section headers are for main topics and will be used to create an internal to the page navigation. You can leave them blank if it's not applicable.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_615de59127e7a",
-            "label": "Section Body",
-            "name": "section_body",
-            "type": "wysiwyg",
+            "key": "field_615f1953cda00",
+            "label": "Sections",
+            "name": "sections",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -53,35 +34,77 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_615de5a727e7b",
-            "label": "Callout Type",
-            "name": "callout_type",
-            "type": "radio",
-            "instructions": "Callout types will give the content body different visual looks.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Important": "Important",
-                "Note": "Note"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "default_value": "",
-            "layout": "vertical",
-            "return_format": "value",
-            "save_other_choice": 0
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add section",
+            "sub_fields": [
+                {
+                    "key": "field_615f195ccda01",
+                    "label": "Section Title",
+                    "name": "section_title",
+                    "type": "text",
+                    "instructions": "If you don't need one, just leave it blank. They will be part of an auto-created navigation.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_615f198dcda02",
+                    "label": "Section Content",
+                    "name": "section_content",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_615f19b69660e",
+                    "label": "Callout Type",
+                    "name": "callout_type",
+                    "type": "radio",
+                    "instructions": "This gives a special visual separator for the content. You won't use it most of the time.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Important": "Important",
+                        "Normal": "Normal",
+                        "Note": "Note",
+                        "Warning": "Warning"
+                    },
+                    "allow_null": 1,
+                    "other_choice": 0,
+                    "default_value": "Normal",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                }
+            ]
         },
         {
             "key": "field_615de61327e7c",
@@ -171,5 +194,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1633544919
+    "modified": 1633622657
 }

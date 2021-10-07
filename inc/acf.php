@@ -24,16 +24,18 @@ function dlinq_section_repeater(){
 
             // Load sub field value.
             if(get_sub_field('section_title')){
-                $title = '<h2>' . get_sub_field('section_title') . '</h2>';
+                $title = get_sub_field('section_title');
+                $id = sanitize_title($title);
+                $title_block = "<h2 id='{$id}'>{$title}</h2>";
             } else {
-                $title = '';
+                $title_block = '';
             }
             $content = get_sub_field('section_content');
             $type = get_sub_field('callout_type');
 
             $html .= "<div class='section {$type}'>
-                    $title
-                    $content
+                    {$title_block}
+                    {$content}
             </div>";
             // Do something...
         // End loop.
@@ -45,6 +47,30 @@ function dlinq_section_repeater(){
         endif;
     }
 
+function dlinq_documentation_nav(){
+    $html = '';
+    if( have_rows('sections') ):
+
+        // Loop through rows.
+        while( have_rows('sections') ) : the_row();
+            // Load sub field value.
+            if(get_sub_field('section_title')){
+                $title = get_sub_field('section_title');
+                $id = sanitize_title($title);
+                $title_nav = "<a href='#{$id}'>{$title}</a>";
+                $html .= "<li>{$title_nav}</li>";
+            } 
+
+            // Do something...
+        // End loop.
+        endwhile;
+        return "<div class='doc-nav'><h2>On this page</h2><ul>{$html}</ul></div>";
+        // No value.
+        else :
+            // Do something...
+        endif;
+
+}
 
 
 

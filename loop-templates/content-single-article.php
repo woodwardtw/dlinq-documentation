@@ -30,6 +30,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php
 		//the_content();
 		echo dlinq_app_overview();
+		echo dlinq_documentation_nav();
 		echo dlinq_section_repeater();
 		understrap_link_pages();
 		?>

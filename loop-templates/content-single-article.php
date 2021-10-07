@@ -32,6 +32,7 @@ defined( 'ABSPATH' ) || exit;
 		echo dlinq_app_overview();
 		echo dlinq_documentation_nav();
 		echo dlinq_section_repeater();
+		echo dlinq_internal_pages();
 		understrap_link_pages();
 		?>
 

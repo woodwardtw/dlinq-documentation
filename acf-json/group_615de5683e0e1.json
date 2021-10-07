@@ -107,6 +107,31 @@
             ]
         },
         {
+            "key": "field_615f2badde9ec",
+            "label": "Related Internal Pages",
+            "name": "related_internal_pages",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "article"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
             "key": "field_615de61327e7c",
             "label": "Related External Documents",
             "name": "related_external_documents",
@@ -186,7 +211,6 @@
         "slug",
         "author",
         "format",
-        "page_attributes",
         "featured_image",
         "categories",
         "tags",
@@ -194,5 +218,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1633624278
+    "modified": 1633627224
 }

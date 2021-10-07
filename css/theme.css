@@ -16112,6 +16112,10 @@ h1.entry-title {
   overflow: hidden;
 }
 
+.entry-content a {
+  text-decoration: underline;
+}
+
 .entry-content h2 {
   border-left: 8px #e5f1fa solid;
   margin-top: 30px;

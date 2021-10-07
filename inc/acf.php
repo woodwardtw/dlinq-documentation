@@ -59,17 +59,31 @@ function dlinq_documentation_nav(){
                 $id = sanitize_title($title);
                 $title_nav = "<a href='#{$id}'>{$title}</a>";
                 $html .= "<li>{$title_nav}</li>";
-            } 
-
-            // Do something...
-        // End loop.
+            }     
         endwhile;
+        if(get_field('related_internal_pages')){
+                $html .= "<li><a href='#learn-more-int'>Learn More (internal)</a></li>";
+            }
         return "<div class='doc-nav'><h2>On this page</h2><ul>{$html}</ul></div>";
         // No value.
         else :
             // Do something...
         endif;
 
+}
+
+function dlinq_internal_pages(){
+    $html = '';
+    if(get_field('related_internal_pages')){
+        $pages = get_field('related_internal_pages');
+        foreach ($pages as $key => $page) {
+            // code...
+            $url = get_post_permalink($page->ID);
+            $title = $page->post_title;
+            $html .= "<li><a href='{$url}'>{$title}</a></li>";
+        }
+    }
+     return "<div class='doc-nav'><h2 id='learn-more-int'>Learn More (internal)</h2><ul>{$html}</ul></div>";
 }
 
 

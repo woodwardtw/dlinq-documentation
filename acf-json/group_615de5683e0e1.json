@@ -92,10 +92,10 @@
                         "id": ""
                     },
                     "choices": {
-                        "Important": "Important",
-                        "Normal": "Normal",
-                        "Note": "Note",
-                        "Warning": "Warning"
+                        "important": "Important",
+                        "normal": "Normal",
+                        "note": "Note",
+                        "warning": "Warning"
                     },
                     "allow_null": 1,
                     "other_choice": 0,
@@ -194,5 +194,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1633622657
+    "modified": 1633624278
 }

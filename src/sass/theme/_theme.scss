@@ -2,12 +2,51 @@
 
 
 h1, h2, h3, h4, h5, h6 {
-	background-color: $light-blue;
 	padding: 5px 10px;
 	font-family: georgia,serif;
 }
 
 p {
 	font-family: Open Sans,tahoma,geneva,sans-serif;
-	font-size: 1rem;
+	font-size: 1.1rem;
+}
+
+.documentation p {
+	margin: 15px 10px;
+}
+
+h1.entry-title {
+	background-color: #fff;
+}
+
+.entry-content {
+	overflow: hidden;
+}
+
+.entry-content h2 {
+	border-left: 5px $light-blue solid;
+	margin-top: 30px;
+}
+
+.entry-content h2:after {
+    left: .5em;
+    margin-right: -50%;
+}
+
+.entry-content h2:after {
+    background-color: $light-blue;
+    content: "";
+    display: inline-block;
+    height: 5px;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.warning {
+	border: 2px solid red;
+	margin: 20px 10px;
+	font-size: 1.3rem;
+	padding: 20px;
+	border-radius: 5px;
 }

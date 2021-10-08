@@ -85,6 +85,8 @@ h1.entry-title {
 
 .highlights .card {
 	padding: 10px 15px;
+	// height: 325px;
+	position: relative;
 }
 
 .highlights h2 {
@@ -99,10 +101,16 @@ h1.entry-title {
 	margin-bottom: 30px;
 }
 
+.highlights .card-footer {
+	background-color: #fff;
+	border-top: none;
+}
+
 .highlights .btn-primary {
 	width: 250px;
 	border-radius: 30px;
 	font-weight: 700;
-	margin: 20px auto;
-	display: inline-block;
+	margin: auto;
+	display: block;
+	margin: 0px auto 20px auto;
 }

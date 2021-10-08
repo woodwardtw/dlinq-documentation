@@ -119,12 +119,14 @@ function dlinq_highlight_repeater(){
             $link = get_sub_field('link');
             $description = get_sub_field('description');
             $html .= "<div class='col-md-4'>
-                        <div class='card'>
-                         <h2>{$title}</h2>
-                         <div class='highlight-desc'>{$description}</div>
-                         <a class='btn btn-primary' href='{$link}' aria-label='Learn more about {$title}.'>Learn More</a>
-                        </div>
-                        </div>";
+                            <div class='card h-100'>
+                             <h2>{$title}</h2>
+                                 <div class='highlight-desc card-body'>{$description}</div>
+                                 <div class='card-footer'>
+                                    <a class='btn btn-primary' href='{$link}' aria-label='Learn more about {$title}.'>Learn More</a>
+                                </div>
+                            </div>
+                    </div>";
             // Do something...
         // End loop.
         endwhile;

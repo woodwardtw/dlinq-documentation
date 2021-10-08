@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 				<?php get_search_form();?>
 			</div>
 		</div>
-		<div class="row highlights">
+		<div class="row highlights justify-content-center">
 			<?php echo dlinq_highlight_repeater();?>
 		</div>
 

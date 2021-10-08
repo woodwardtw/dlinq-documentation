@@ -82,8 +82,8 @@ function dlinq_internal_pages(){
             $title = $page->post_title;
             $html .= "<li><a href='{$url}'>{$title}</a></li>";
         }
+        return "<div class='doc-nav'><h2 id='learn-more-int'>Learn More (internal)</h2><ul>{$html}</ul></div>";
     }
-     return "<div class='doc-nav'><h2 id='learn-more-int'>Learn More (internal)</h2><ul>{$html}</ul></div>";
 }
 
 

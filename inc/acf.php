@@ -82,9 +82,31 @@ function dlinq_internal_pages(){
             $title = $page->post_title;
             $html .= "<li><a href='{$url}'>{$title}</a></li>";
         }
-        return "<div class='doc-nav'><h2 id='learn-more-int'>Learn More (internal)</h2><ul>{$html}</ul></div>";
+        $external = dlinq_external_pages();
+        return "<div class='doc-nav'><h2 id='learn-more-int'>Learn More</h2><h3>Middlebury Resources</h3><ul>{$html}</ul>{$external}</div>";
     }
 }
+
+
+function dlinq_external_pages(){
+    $html = '';
+    if( have_rows('related_external_documents') ):
+
+        // Loop through rows.
+        while( have_rows('related_external_documents') ) : the_row();
+
+            // Load sub field value.
+            $title = get_sub_field('title');
+            $link = get_sub_field('link');
+            $html .= "<li><a href='{$link}'>{$title}</a></li>";
+        endwhile;
+        return "<h3>External Resources</h3><ul>{$html}</ul>";
+        // No value.
+        else :
+            // Do something...
+        endif;
+}
+
 
 
 

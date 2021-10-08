@@ -61,8 +61,8 @@ function dlinq_documentation_nav(){
                 $html .= "<li>{$title_nav}</li>";
             }     
         endwhile;
-        if(get_field('related_internal_pages')){
-                $html .= "<li><a href='#learn-more-int'>Learn More (internal)</a></li>";
+        if(get_field('related_internal_pages') || get_field('related_external_documents')){
+                $html .= "<li><a href='#learn-more'>Learn More</a></li>";
             }
         return "<div class='doc-nav'><h2>On this page</h2><ul>{$html}</ul></div>";
         // No value.
@@ -83,7 +83,7 @@ function dlinq_internal_pages(){
             $html .= "<li><a href='{$url}'>{$title}</a></li>";
         }
         $external = dlinq_external_pages();
-        return "<div class='doc-nav'><h2 id='learn-more-int'>Learn More</h2><h3>Middlebury Resources</h3><ul>{$html}</ul>{$external}</div>";
+        return "<div class='doc-nav'><h2 id='learn-more'>Learn More</h2><h3>Middlebury Resources</h3><ul>{$html}</ul>{$external}</div>";
     }
 }
 

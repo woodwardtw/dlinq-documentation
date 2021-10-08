@@ -107,6 +107,35 @@ function dlinq_external_pages(){
         endif;
 }
 
+function dlinq_highlight_repeater(){
+    $html = '';
+    if( have_rows('highlight') ):
+
+        // Loop through rows.
+        while( have_rows('highlight') ) : the_row();
+
+            // Load sub field value.
+            $title = get_sub_field('title');
+            $link = get_sub_field('link');
+            $description = get_sub_field('description');
+            $html .= "<div class='col-md-4'>
+                        <div class='card'>
+                         <h2>{$title}</h2>
+                         <div class='highlight-desc'>{$description}</div>
+                         <a class='btn btn-primary' href='{$link}' aria-label='Learn more about {$title}.'>Learn More</a>
+                        </div>
+                        </div>";
+            // Do something...
+        // End loop.
+        endwhile;
+        return $html;
+        // No value.
+        else :
+            // Do something...
+        endif;
+    }
+
+
 
 
 

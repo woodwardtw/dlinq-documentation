@@ -16134,4 +16134,32 @@ h1.entry-title {
   border-radius: 5px;
 }
 
+.highlights {
+  margin-top: 100px;
+}
+
+.highlights .card {
+  padding: 10px 15px;
+}
+
+.highlights h2 {
+  text-align: center;
+  border-left: 0;
+}
+
+.highlight-desc {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+
+.highlights .btn-primary {
+  width: 250px;
+  border-radius: 30px;
+  font-weight: 700;
+  margin: 20px auto;
+  display: inline-block;
+}
+
 /*# sourceMappingURL=theme.css.map */

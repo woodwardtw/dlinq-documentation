@@ -61,14 +61,12 @@ h1.entry-title {
 }
 
 h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
-	border: 4px dotted $primary;
-	padding-left: 5px;
+	border: 4px dotted;
 	animation: fadebackground 6s 1;
-	background-color: $light-blue;
 }
 @keyframes fadebackground {
-  from {background-color: white;}
-  to {background-color: $light-blue;}
+  from {background-color: $light-blue;}
+  to {background-color: #fff;}
 }
 
 

@@ -16127,28 +16127,26 @@ h1.entry-title {
 }
 
 h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
-  border: 4px dotted #071427;
-  padding-left: 5px;
+  border: 4px dotted;
   -webkit-animation: fadebackground 6s 1;
   animation: fadebackground 6s 1;
-  background-color: #e5f1fa;
 }
 
 @-webkit-keyframes fadebackground {
   from {
-    background-color: white;
+    background-color: #e5f1fa;
   }
   to {
-    background-color: #e5f1fa;
+    background-color: #fff;
   }
 }
 
 @keyframes fadebackground {
   from {
-    background-color: white;
+    background-color: #e5f1fa;
   }
   to {
-    background-color: #e5f1fa;
+    background-color: #fff;
   }
 }
 .important, .note, .warning {

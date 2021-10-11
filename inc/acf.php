@@ -29,7 +29,8 @@ function dlinq_documentation_nav(){
                 $title = get_sub_field('section_title');
                 $id = sanitize_title($title);
                 $page_url = get_permalink();
-                $title_nav = "<a href='{$page_url}#{$id}'>{$title}</a>";
+                $row = '-'.get_row_index();
+                $title_nav = "<a href='{$page_url}#{$id}{$row}'>{$title}</a>";
                 $html .= "<li>{$title_nav}</li>";
             }     
         endwhile;
@@ -62,8 +63,8 @@ function dlinq_section_repeater(){
             }
             $content = get_sub_field('section_content');
             $type = get_sub_field('callout_type');
-
-            $html .= "<div id='{$id}' class='section {$type}'>
+            $row = '-'.get_row_index();
+            $html .= "<div id='{$id}{$row}' class='section {$type}'>
                     {$title_block}
                     {$content}
             </div>";

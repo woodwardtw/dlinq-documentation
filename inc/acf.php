@@ -8,6 +8,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+
+//OVERVIEW
 function dlinq_app_overview(){
     if(get_field('overview')){
         $overview = get_field('overview');
@@ -15,38 +17,7 @@ function dlinq_app_overview(){
     }
 }
 
-function dlinq_section_repeater(){
-    $html = '';
-    if( have_rows('sections') ):
-
-        // Loop through rows.
-        while( have_rows('sections') ) : the_row();
-
-            // Load sub field value.
-            if(get_sub_field('section_title')){
-                $title = get_sub_field('section_title');
-                $id = sanitize_title($title);
-                $title_block = "<h2 id='{$id}'>{$title}</h2>";
-            } else {
-                $title_block = '';
-            }
-            $content = get_sub_field('section_content');
-            $type = get_sub_field('callout_type');
-
-            $html .= "<div class='section {$type}'>
-                    {$title_block}
-                    {$content}
-            </div>";
-            // Do something...
-        // End loop.
-        endwhile;
-        return $html;
-        // No value.
-        else :
-            // Do something...
-        endif;
-    }
-
+//INTERNAL PAGE NAV
 function dlinq_documentation_nav(){
     $html = '';
     if( have_rows('sections') ):
@@ -57,7 +28,8 @@ function dlinq_documentation_nav(){
             if(get_sub_field('section_title')){
                 $title = get_sub_field('section_title');
                 $id = sanitize_title($title);
-                $title_nav = "<a href='#{$id}'>{$title}</a>";
+                $page_url = get_permalink();
+                $title_nav = "<a href='{$page_url}#{$id}'>{$title}</a>";
                 $html .= "<li>{$title_nav}</li>";
             }     
         endwhile;
@@ -71,6 +43,39 @@ function dlinq_documentation_nav(){
         endif;
 
 }
+
+
+function dlinq_section_repeater(){
+    $html = '';
+    if( have_rows('sections') ):
+
+        // Loop through rows.
+        while( have_rows('sections') ) : the_row();
+
+            // Load sub field value.
+            if(get_sub_field('section_title')){
+                $title = get_sub_field('section_title');
+                $id = sanitize_title($title);
+                $title_block = "<h2 id='header-{$id}'>{$title}</h2>";
+            } else {
+                $title_block = '';
+            }
+            $content = get_sub_field('section_content');
+            $type = get_sub_field('callout_type');
+
+            $html .= "<div id='{$id}' class='section {$type}'>
+                    {$title_block}
+                    {$content}
+            </div>";
+            // Do something...
+        // End loop.
+        endwhile;
+        return $html;
+        // No value.
+        else :
+            // Do something...
+        endif;
+    }
 
 function dlinq_internal_pages(){
     $html = '';

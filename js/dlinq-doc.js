@@ -1,5 +1,4 @@
 // Add your JS customizations here
-console.log('loadedddddd')
 
 //smooth scroll
 // handle links with @href started with '#' only
@@ -15,10 +14,10 @@ jQuery(document).on('click', 'a[href^="#"]', function(e) {
     }
 
     // prevent standard hash navigation (avoid blinking in IE)
-    e.preventDefault();
+    //e.preventDefault();
 
     // top position relative to the document
-    var pos = $id.offset().top;
+    var pos = ($id.offset().top)-50;
 
     // animated top scrolling
     jQuery('body, html').animate({scrollTop: pos});

@@ -12,6 +12,7 @@ p {
 	font-size: 1.1rem;
 }
 
+//DOCUMENTATION or ARTICLE . . . 
 .documentation p {
 	margin: 15px 10px;
 }
@@ -59,12 +60,37 @@ h1.entry-title {
 	margin-left: 10px;
 }
 
-.warning {
-	border: 2px solid red;
+h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
+	border: 4px dotted $primary;
+	padding-left: 5px;
+	animation: fadebackground 6s 1;
+	background-color: $light-blue;
+}
+@keyframes fadebackground {
+  from {background-color: white;}
+  to {background-color: $light-blue;}
+}
+
+
+.important, .note, .warning {
 	margin: 20px 10px;
 	font-size: 1.3rem;
 	padding: 20px;
 	border-radius: 5px;
+}
+
+.important {
+	border: 2px solid $primary;
+	
+}
+
+.note {
+	border: 2px solid #efefef;	
+}
+
+
+.warning {
+	border: 2px solid red;
 }
 
 //home 
@@ -85,8 +111,14 @@ h1.entry-title {
 
 .highlights .card {
 	padding: 10px 15px;
+	margin: 10px;
 	// height: 325px;
 	position: relative;
+	transition: all 0.5s ease;
+}
+
+.highlights .card:hover {
+	box-shadow: 0 0 8px $primary;
 }
 
 .highlights h2 {

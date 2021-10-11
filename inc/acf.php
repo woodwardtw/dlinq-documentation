@@ -54,16 +54,17 @@ function dlinq_section_repeater(){
         while( have_rows('sections') ) : the_row();
 
             // Load sub field value.
+            $row = '-'.get_row_index();
             if(get_sub_field('section_title')){
                 $title = get_sub_field('section_title');
                 $id = sanitize_title($title);
-                $title_block = "<h2 id='header-{$id}'>{$title}</h2>";
+                $page_url = get_permalink();
+                $title_block = "<h2 id='header-{$id}'>{$title}</h2><button class='direct-link' data-url='{$page_url}#{$id}{$row}'>copy link</button>";
             } else {
                 $title_block = '';
             }
             $content = get_sub_field('section_content');
             $type = get_sub_field('callout_type');
-            $row = '-'.get_row_index();
             $html .= "<div id='{$id}{$row}' class='section {$type}'>
                     {$title_block}
                     {$content}

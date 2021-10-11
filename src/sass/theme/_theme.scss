@@ -61,8 +61,10 @@ h1.entry-title {
 }
 
 h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
+	margin-top: 30px;
 	border: 4px dotted;
 	animation: fadebackground 6s 1;
+	padding: 20px;
 }
 @keyframes fadebackground {
   from {background-color: $light-blue;}
@@ -99,7 +101,15 @@ h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
 	border: 2px solid red;
 }
 
-//home 
+.direct-link {
+	font-size: .8rem;
+	float: right;
+	border: 0;
+	background-color: $dark-gray;
+	color: #fff;
+}
+
+//home ****************************
 
 .home-title {
 	text-align: center;

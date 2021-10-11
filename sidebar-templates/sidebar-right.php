@@ -22,5 +22,5 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	<div class="col-md-4 widget-area" id="right-sidebar">
 <?php endif; ?>
 <?php dynamic_sidebar( 'right-sidebar' ); ?>
-
+<?php echo dlinq_article_subpages();?>
 </div><!-- #right-sidebar -->

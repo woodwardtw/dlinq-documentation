@@ -144,7 +144,32 @@ function dlinq_highlight_repeater(){
         endif;
     }
 
-
+function dlinq_article_subpages(){
+    global $post;
+    if(get_post_type() == 'article'){
+        $html = '';
+        $args = array(
+        'posts_per_page' => -1,
+        'order'          => 'DESC',
+        'post_parent'    => $post->ID,
+        'post_type'      => 'article'
+        );
+     
+        $doc_children = get_children( $args); 
+        //var_dump($doc_children);
+        if($doc_children){
+            $html = '<div class="article-links"><h2>Dig Deeper</h2><ol>';
+            foreach ($doc_children as $key => $child) {
+                // code...
+                $title = $child->post_title;
+                $link = get_permalink($child->ID);
+                $html .= "<li><a href='{$link}'>{$title}</a></li>";
+            }
+            return $html.'</ol></div>';
+        }
+    }
+    
+}
 
 
 

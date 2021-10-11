@@ -16179,6 +16179,10 @@ h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
   color: #fff;
 }
 
+.search-field:focus {
+  box-shadow: none;
+}
+
 .home-title {
   text-align: center;
   font-size: 4rem;

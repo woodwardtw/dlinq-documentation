@@ -61,7 +61,7 @@ h1.entry-title {
 }
 
 h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
-	margin-top: 30px;
+	margin: 30px 0;
 	border: 4px dotted;
 	animation: fadebackground 6s 1;
 	padding: 20px;

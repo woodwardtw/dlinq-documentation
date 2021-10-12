@@ -34,7 +34,9 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="entry-summary">
 
-		<?php the_excerpt(); ?>
+		<?php 
+			echo dlinq_acf_search();
+		//the_excerpt(); ?>
 
 	</div><!-- .entry-summary -->
 

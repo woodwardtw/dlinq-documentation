@@ -89,8 +89,11 @@ function dlinq_internal_pages(){
             $title = $page->post_title;
             $html .= "<li><a href='{$url}'>{$title}</a></li>";
         }
+    }
+    if (have_rows('related_internal_pages') || have_rows('related_external_documents')){
+        $internal = "<h3>Middlebury Resources</h3><ul>{$html}</ul>";
         $external = dlinq_external_pages();
-        return "<div class='doc-nav'><h2 id='learn-more'>Learn More</h2><h3>Middlebury Resources</h3><ul>{$html}</ul>{$external}</div>";
+        return "<div class='doc-nav'><h2 id='learn-more'>Learn More</h2>{$internal}{$external}</div>";
     }
 }
 

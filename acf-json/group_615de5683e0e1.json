@@ -186,6 +186,55 @@
                     "placeholder": ""
                 }
             ]
+        },
+        {
+            "key": "field_617c0769e2caa",
+            "label": "Help Section",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_617c0b24f4a36",
+            "label": "Technical support link",
+            "name": "technical_support_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/support.gmhec.org\/TDClient\/47\/middlebury\/Home\/",
+            "placeholder": ""
+        },
+        {
+            "key": "field_617c0b51f4a37",
+            "label": "Pedagogical support link",
+            "name": "pedagogical_support_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/dlinq.middcreate.net\/request-a-dlinq-consultation\/",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -218,5 +267,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1633627224
+    "modified": 1635519348
 }

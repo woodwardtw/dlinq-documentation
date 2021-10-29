@@ -194,7 +194,7 @@ function dlinq_help_section(){
                     <h2 id='header-help'>Need help?</h2><button class='direct-link' data-url='{$page_url}#help'>copy link</button>
                 <p>For technical support for {$title}, <a href='https://support.gmhec.org/TDClient/47/middlebury/Shared/Search/?c=all&s={$title}'>search the ITS Knowledge Base</a> or <a href='{$its_link}'>submit a help ticket here</a>.</p>
 
-                <p>For pedagogical support for Google Apps for Education, <a href='{$dlinq_link}'>schedule a consultation with a DLINQ team member</a>.</p>                
+                <p>For pedagogical support for {$title}, <a href='{$dlinq_link}'>schedule a consultation with a DLINQ team member</a>.</p>                
 
             </div>";
     return $html;

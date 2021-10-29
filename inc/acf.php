@@ -185,13 +185,14 @@ function dlinq_acf_search(){
 }
 
 function dlinq_help_section(){
+    $title = get_the_title();
     $page_url = get_permalink();
     $its_link = get_field('technical_support_link');
     $dlinq_link = get_field('pedagogical_support_link');
     $html = 
             "<div id='help' class='section important'>
                     <h2 id='header-help'>Need help?</h2><button class='direct-link' data-url='{$page_url}#help'>copy link</button>
-                <p>For technical support for Google Apps for Education, <a href='{$its_link}'>search ITS’ Knowledge Base</a> or contact the Help Desk.</p>
+                <p>For technical support for {$title}, <a href='https://support.gmhec.org/TDClient/47/middlebury/Shared/Search/?c=all&s={$title}'>search the ITS Knowledge Base</a> or <a href='{$its_link}'>submit a help ticket here</a>.</p>
 
                 <p>For pedagogical support for Google Apps for Education, <a href='{$dlinq_link}'>schedule a consultation with a DLINQ team member</a>.</p>                
 

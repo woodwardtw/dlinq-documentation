@@ -235,6 +235,55 @@
             },
             "default_value": "https:\/\/dlinq.middcreate.net\/request-a-dlinq-consultation\/",
             "placeholder": ""
+        },
+        {
+            "key": "field_618d7d8eab9f9",
+            "label": "Reviews Section",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_618d7d271c65d",
+            "label": "Privacy statement link",
+            "name": "privacy_statement_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_618d7d4bd6a1e",
+            "label": "Accessibility statement link",
+            "name": "accessibility_statement_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -267,5 +316,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1635520860
+    "modified": 1636662692
 }

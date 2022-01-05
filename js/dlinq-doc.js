@@ -71,3 +71,14 @@ function fallbackCopyTextToClipboard(text) {
 
   document.body.removeChild(textArea);
 }
+
+jQuery('#doc-btn-expand-collapse').click(function(e) {
+  console.log('clack')
+  jQuery('#navbar-documentation').toggleClass('collapsed');
+  let button = document.querySelector('#doc-btn-expand-collapse');
+  if(button.innerHTML === 'x'){
+      button.innerHTML = '+'
+  } else {
+      button.innerHTML = 'x'
+  }
+});

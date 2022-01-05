@@ -29,8 +29,9 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php
 		//the_content();
-		echo dlinq_app_overview();
 		echo dlinq_documentation_nav();
+		echo dlinq_app_overview();
+		echo dlinq_get_started();
 		echo dlinq_section_repeater();
 		echo dlinq_help_section();
 		echo dlinq_internal_pages();

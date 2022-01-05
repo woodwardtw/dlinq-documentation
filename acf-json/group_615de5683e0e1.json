@@ -22,11 +22,54 @@
             "delay": 0
         },
         {
+            "key": "field_61d5d05af05f8",
+            "label": "Get started",
+            "name": "get_started",
+            "type": "wysiwyg",
+            "instructions": "Basics that include access and login information.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "80",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_61d5d093f05f9",
+            "label": "Canvas Integration",
+            "name": "canvas_integration",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "true": "Available in Canvas",
+                "false": "Not integrated"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "false",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_615f1953cda00",
             "label": "Sections",
             "name": "sections",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Chunks of content that don't deserve an entire page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -103,6 +146,62 @@
                     "layout": "vertical",
                     "return_format": "value",
                     "save_other_choice": 0
+                }
+            ]
+        },
+        {
+            "key": "field_61d5d2e3b4817",
+            "label": "Teaching Resources",
+            "name": "teaching_resources",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_61d5d2e4b4818",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_61d5d2e4b4819",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
                 }
             ]
         },
@@ -316,5 +415,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1636662692
+    "show_in_rest": 0,
+    "modified": 1641403193
 }

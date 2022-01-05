@@ -13,13 +13,26 @@ defined( 'ABSPATH' ) || exit;
 function dlinq_app_overview(){
     if(get_field('overview')){
         $overview = get_field('overview');
-        return "<h2>Overview</h2><div class='documentation'>{$overview}</div>";
+        return "<div class='section'><h2 id='overview'>Overview</h2><div class='documentation'>{$overview}</div></div>";
+    }
+}
+
+function dlinq_get_started(){
+    if(get_field('get_started')){
+        $overview = get_field('get_started');
+        return "<div class='section'><h2 id='get_started'>Get Started</h2><div class='documentation'>{$overview}</div></div>";
     }
 }
 
 //INTERNAL PAGE NAV
 function dlinq_documentation_nav(){
     $html = '';
+    if(get_field('overview')){
+        $html .= "<li><a href='#overview'>Overview</a></li>";
+    }
+    if(get_field('get_started')){
+        $html .= "<li><a href='#get_started'>Get Started</a></li>";
+    }
     if( have_rows('sections') ):
 
         // Loop through rows.
@@ -38,7 +51,7 @@ function dlinq_documentation_nav(){
         if(get_field('related_internal_pages') || get_field('related_external_documents')){
                 $html .= "<li><a href='#learn-more'>Learn More</a></li>";
             }
-        return "<div class='doc-nav'><h2>On this page</h2><ul>{$html}</ul></div>";
+        return "<nav class='doc-nav' id='navbar-documentation'><button id='doc-btn-expand-collapse'  aria-controls='navbar-documentation' aria-expanded='true'>x</button><h2>On this page</h2><ul>{$html}</ul></nav>";
         // No value.
         else :
             // Do something...

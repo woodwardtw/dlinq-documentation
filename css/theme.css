@@ -16135,18 +16135,23 @@ h1.entry-title {
   margin-bottom: 4px;
   margin-left: auto;
   display: block;
-  border: 1px solid #007bff;
+  border: 1px solid #071427;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  background-color: #071427;
+  color: #fff;
+  float: right;
 }
 
 .collapsed #doc-btn-expand-collapse {
   margin-left: auto;
   margin-right: auto;
+  float: none;
 }
 
 #doc-btn-expand-collapse:hover {
   background-color: #fff;
+  color: #071427;
 }
 
 #navbar-documentation.collapsed {
@@ -16284,6 +16289,14 @@ h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
   margin: auto;
   display: block;
   margin: 0px auto 20px auto;
+}
+
+.article-links {
+  margin: 30px 0;
+}
+
+.wp-block-search__button {
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=theme.css.map */

@@ -54,17 +54,22 @@ h1.entry-title {
     margin-bottom: 4px;
 	margin-left: auto;
 	display: block;
-	border: 1px solid $blue;
+	border: 1px solid $primary;
 	transition: all .3s ease;
+	background-color: $primary;
+	color: $white;
+	float: right;
 }
 
 .collapsed #doc-btn-expand-collapse {
 	margin-left: auto;
 	margin-right: auto;
+	float: none;
 }
 
 #doc-btn-expand-collapse:hover {
 	background-color: $white;
+	color: $primary;
 }
 
 #navbar-documentation.collapsed {
@@ -213,4 +218,12 @@ h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
 	margin: auto;
 	display: block;
 	margin: 0px auto 20px auto;
+}
+
+.article-links {
+	margin: 30px 0;
+}
+
+.wp-block-search__button {
+	border-radius: 5px;
 }

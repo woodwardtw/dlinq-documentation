@@ -38,6 +38,7 @@ function dlinq_documentation_nav(){
         // Loop through rows.
         while( have_rows('sections') ) : the_row();
             // Load sub field value.
+            $html .= "<ul>";
             if(get_sub_field('section_title')){
                 $title = get_sub_field('section_title');
                 $id = sanitize_title($title);
@@ -46,12 +47,16 @@ function dlinq_documentation_nav(){
                 $title_nav = "<a href='{$page_url}#{$id}{$row}'>{$title}</a>";
                 $html .= "<li>{$title_nav}</li>";
             }     
+            $html .= "</ul>";
         endwhile;
+        if(get_field('teaching_resources')){
+            $html .= "<li><a href='#teaching-resources'>Teaching Resources</a></li>";
+        }
         $html .= "<li><a href='{$page_url}#help'>Need help?</a></li>";
         if(get_field('related_internal_pages') || get_field('related_external_documents')){
                 $html .= "<li><a href='#learn-more'>Learn More</a></li>";
             }
-        return "<nav class='doc-nav' id='navbar-documentation'><button id='doc-btn-expand-collapse'  aria-controls='navbar-documentation' aria-expanded='true'>x</button><h2>On this page</h2><ul>{$html}</ul></nav>";
+        return "<nav class='doc-nav' id='navbar-documentation'><button id='doc-btn-expand-collapse'  aria-controls='navbar-documentation' aria-expanded='true' aria-label='Hide or show the internal navigation.'>x</button><h2>On this page</h2><ul>{$html}</ul></nav>";
         // No value.
         else :
             // Do something...
@@ -109,6 +114,26 @@ function dlinq_internal_pages(){
         $external = dlinq_external_pages();
         return "<div class='doc-nav'><h2 id='learn-more'>Learn More</h2>{$internal}{$external}</div>";
     }
+}
+
+function dlinq_teaching(){
+    $app_title = get_the_title();
+    $html = '';
+    if( have_rows('teaching_resources') ):
+
+        // Loop through rows.
+        while( have_rows('teaching_resources') ) : the_row();
+
+            // Load sub field value.
+            $title = get_sub_field('title');
+            $link = get_sub_field('link');
+            $html .= "<li><a href='{$link}'>{$title}</a></li>";
+        endwhile;
+        return "<h3 id='teaching-resources'>Teaching with {$app_title}</h3><ul>{$html}</ul>";
+        // No value.
+        else :
+            // Do something...
+        endif;
 }
 
 

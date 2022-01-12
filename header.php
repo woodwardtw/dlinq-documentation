@@ -14,6 +14,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+<!--
+Made by
+
+DDDDDDDDDDDDD             LLLLLLLLLLL                  IIIIIIIIII     NNNNNNNN        NNNNNNNN          QQQQQQQQQ      
+D::::::::::::DDD          L:::::::::L                  I::::::::I     N:::::::N       N::::::N        QQ:::::::::QQ    
+D:::::::::::::::DD        L:::::::::L                  I::::::::I     N::::::::N      N::::::N      QQ:::::::::::::QQ  
+DDD:::::DDDDD:::::D       LL:::::::LL                  II::::::II     N:::::::::N     N::::::N     Q:::::::QQQ:::::::Q 
+  D:::::D    D:::::D        L:::::L                      I::::I       N::::::::::N    N::::::N     Q::::::O   Q::::::Q 
+  D:::::D     D:::::D       L:::::L                      I::::I       N:::::::::::N   N::::::N     Q:::::O     Q:::::Q 
+  D:::::D     D:::::D       L:::::L                      I::::I       N:::::::N::::N  N::::::N     Q:::::O     Q:::::Q 
+  D:::::D     D:::::D       L:::::L                      I::::I       N::::::N N::::N N::::::N     Q:::::O     Q:::::Q 
+  D:::::D     D:::::D       L:::::L                      I::::I       N::::::N  N::::N:::::::N     Q:::::O     Q:::::Q 
+  D:::::D     D:::::D       L:::::L                      I::::I       N::::::N   N:::::::::::N     Q:::::O     Q:::::Q 
+  D:::::D     D:::::D       L:::::L                      I::::I       N::::::N    N::::::::::N     Q:::::O  QQQQ:::::Q 
+  D:::::D    D:::::D        L:::::L         LLLLLL       I::::I       N::::::N     N:::::::::N     Q::::::O Q::::::::Q 
+DDD:::::DDDDD:::::D       LL:::::::LLLLLLLLL:::::L     II::::::II     N::::::N      N::::::::N     Q:::::::QQ::::::::Q 
+D:::::::::::::::DD        L::::::::::::::::::::::L     I::::::::I     N::::::N       N:::::::N      QQ::::::::::::::Q  
+D::::::::::::DDD          L::::::::::::::::::::::L     I::::::::I     N::::::N        N::::::N        QQ:::::::::::Q   
+DDDDDDDDDDDDD             LLLLLLLLLLLLLLLLLLLLLLLL     IIIIIIIIII     NNNNNNNN         NNNNNNN          QQQQQQQQ::::QQ 
+                                                                                                                Q:::::Q
+                                                                                                                 QQQQQQ                  
+
+Come see us!
+https://dlinq.middcreate.net/
+
+	-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

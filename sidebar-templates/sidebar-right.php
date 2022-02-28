@@ -23,4 +23,5 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 <?php endif; ?>
 <?php dynamic_sidebar( 'right-sidebar' ); ?>
 <?php echo dlinq_article_subpages();?>
+<?php echo dlinq_video_playlists();?>
 </div><!-- #right-sidebar -->

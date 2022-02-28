@@ -383,6 +383,32 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_621cd1d3ac8e7",
+            "label": "Playlists",
+            "name": "playlists",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "playlist"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
         }
     ],
     "location": [
@@ -416,5 +442,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1641403193
+    "modified": 1646055921
 }

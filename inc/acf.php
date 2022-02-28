@@ -242,14 +242,14 @@ function dlinq_help_section(){
 function dlinq_video_playlists(){
     $html = '';
     if(get_field('playlists')){
-        $html .= '<h2>Video Playlists</h2><ul>';
+        $html .= '<h2>Video Playlists</h2><ol>';
          $playlists = get_field('playlists');
         foreach($playlists as $list){
             $title = $list->post_title;
             $link = get_permalink($list->ID);
             $html .= "<li><a href='{$link}'>{$title}</a></li>";
         }
-        return $html;
+        return $html . '</ol>';
     }
    
 }

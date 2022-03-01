@@ -247,9 +247,9 @@ function dlinq_video_playlists(){
         foreach($playlists as $list){
             $title = $list->post_title;
             $link = get_permalink($list->ID);
-            $html .= "<li><a href='{$link}'>{$title}</a></li></div>";
+            $html .= "<li><a href='{$link}'>{$title}</a></li>";
         }
-        return $html . '</ol>';
+        return $html . '</ol></div>';
     }
    
 }

@@ -231,3 +231,8 @@ h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
 #right-sidebar h2 {
 	border-bottom: 2px solid $light-blue;
 }
+
+.confirm.direct-link {
+  transition: all 3s;
+  background-color: green;
+}

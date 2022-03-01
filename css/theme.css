@@ -16303,4 +16303,10 @@ h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
   border-bottom: 2px solid #e5f1fa;
 }
 
+.confirm.direct-link {
+  -webkit-transition: all 3s;
+  transition: all 3s;
+  background-color: green;
+}
+
 /*# sourceMappingURL=theme.css.map */

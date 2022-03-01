@@ -30,6 +30,7 @@ if (document.querySelectorAll('.direct-link')){
 	  button.addEventListener('click', () => {
 	    console.log(button.dataset.url);
 	    copyTextToClipboard(button.dataset.url);
+      button.classList.add('confirm');
 	  });
 	});
 }

@@ -16347,5 +16347,13 @@ h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
     background-color: green;
   }
 }
+.playlist-content {
+  margin: 50px 0;
+}
+
+.playlist-content li {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
 
 /*# sourceMappingURL=theme.css.map */

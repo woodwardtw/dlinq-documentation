@@ -11,4 +11,8 @@
 .acf-repeater.-block > table > tbody > tr:nth-child(2n) > td .acf-row-handle span{
     color: #8fe2fc;
 }
+
+.acf-field .acf-label label {
+    font-size: 1.5rem;
+}
 /*# sourceMappingURL=admin.css.map */

@@ -16356,4 +16356,13 @@ h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
   margin-bottom: 10px;
 }
 
+.playlist-content ol > li {
+  background-color: #e5f1fa;
+  padding: 3px 5px;
+}
+
+.playlist-content ol > li > ul, .playlist-content ol > li > ol > li {
+  background-color: #fff;
+}
+
 /*# sourceMappingURL=theme.css.map */

@@ -31,6 +31,9 @@ if (document.querySelectorAll('.direct-link')){
 	    console.log(button.dataset.url);
 	    copyTextToClipboard(button.dataset.url);
       button.classList.add('confirm');
+       setTimeout(function(){
+        button.classList.remove("confirm");
+      }, 500);      
 	  });
 	});
 }

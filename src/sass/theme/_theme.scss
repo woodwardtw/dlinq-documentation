@@ -275,3 +275,12 @@ to {background-color: green}
 	font-size: 1.3rem;
 	margin-bottom: 10px;
 }
+
+.playlist-content ol > li {
+	background-color: $light-blue;
+	padding: 3px 5px;
+}
+
+.playlist-content ol > li > ul, .playlist-content ol > li > ol > li {
+	background-color: #fff;
+}

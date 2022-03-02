@@ -16303,10 +16303,49 @@ h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
   border-bottom: 2px solid #e5f1fa;
 }
 
-.confirm.direct-link {
-  -webkit-transition: all 3s;
-  transition: all 3s;
-  background-color: green;
+.direct-link.confirm {
+  -webkit-animation-name: flash-animation;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-name: flash-animation;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes flash-animation {
+  from {
+    background-color: green;
+  }
+  to {
+    background-color: green;
+  }
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes flash-animation {
+  from {
+    background-color: green;
+  }
+  to {
+    background-color: green;
+  }
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    background-color: green;
+  }
 }
 
 /*# sourceMappingURL=theme.css.map */

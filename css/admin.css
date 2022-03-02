@@ -2,7 +2,7 @@
 .acf-repeater.-block > table > tbody > tr:nth-child(2n) > td,
 .acf-repeater.-row > table > tbody > tr:nth-child(2n) > td tr > td,
 .acf-repeater.-block > table > tbody > tr:nth-child(2n) > td tr > td {
-    background: #8fe2fc;
+    background: #cbe5ed;
 }
 
 .acf-repeater.-row > table > tbody > tr:nth-child(2n) .acf-row-handle span,
@@ -10,4 +10,5 @@
 .acf-repeater.-row > table > tbody > tr:nth-child(2n) > td .acf-row-handle span,
 .acf-repeater.-block > table > tbody > tr:nth-child(2n) > td .acf-row-handle span{
     color: #8fe2fc;
-}  
+}
+/*# sourceMappingURL=admin.css.map */

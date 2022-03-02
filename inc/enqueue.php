@@ -32,3 +32,8 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 } // End of if function_exists( 'understrap_scripts' ).
 
 add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
+
+add_action( 'admin_enqueue_scripts', 'load_documentation_admin_style' );
+function load_documentation_admin_style() {
+    wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/css/admin.css', array(), '1.0' );
+}

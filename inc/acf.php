@@ -100,20 +100,21 @@ function dlinq_section_repeater(){
 
 function dlinq_internal_pages(){
     $html = '';
-    if(get_field('related_internal_pages')){
-        $pages = get_field('related_internal_pages');
-        foreach ($pages as $key => $page) {
-            // code...
-            $url = get_post_permalink($page->ID);
-            $title = $page->post_title;
-            $html .= "<li><a href='{$url}'>{$title}</a></li>";
-        }
-    }
-    if (have_rows('related_internal_pages') || have_rows('related_external_documents')){
+     if( have_rows('related_internal_pages') ):
+        // Loop through rows.
+        $html = '';
+        while( have_rows('related_internal_pages') ) : the_row();       
+           // Load sub field value.
+            $title = get_sub_field('title');
+            $link = get_sub_field('link');
+            $html .= "<li><a href='{$link}'>{$title}</a></li>";
+        endwhile;
         $internal = "<h3>Middlebury Resources</h3><ul>{$html}</ul>";
         $external = dlinq_external_pages();
         return "<div class='doc-nav'><h2 id='learn-more'>Learn More</h2>{$internal}{$external}</div>";
-    }
+         else :
+            // Do something...
+        endif;
 }
 
 function dlinq_teaching(){

@@ -33,7 +33,7 @@ defined( 'ABSPATH' ) || exit;
 		echo dlinq_app_overview();
 		echo dlinq_get_started();
 		echo dlinq_section_repeater();
-		echo dlinq_teaching();
+		echo dlinq_article_subpages();//maybe we don't need this at all
 		echo dlinq_help_section();
 		echo dlinq_internal_pages();
 		gravity_form( 1, false, false, false, null, true );

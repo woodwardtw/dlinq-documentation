@@ -250,6 +250,19 @@ function dlinq_canvas_integration(){
     }
 }
 
+function dlinq_extra_links(){
+    $html = '';
+    if(get_field('privacy_statement_link')){
+        $privacy = get_field('privacy_statement_link');
+        $html .= "<div><a href='{$privacy}' class='privacy-link'>Privacy Statement</a></div>";
+    }
+     if(get_field('accessibility_statement_link')){
+        $accessibility = get_field('accessibility_statement_link');
+        $html .= "<div><a href='{$accessibility}' class='accessibility-link'>Accessibility Statement</a></div>";
+        }
+    return $html;
+}
+
 
 function dlinq_video_playlists(){
     $html = '';

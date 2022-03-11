@@ -239,6 +239,17 @@ function dlinq_help_section(){
     return $html;
 }
 
+function dlinq_canvas_integration(){
+    $canvas = get_field('canvas_integration');
+    if($canvas == 'true'){
+        $img = get_stylesheet_directory_uri(). '/imgs/checkbox.svg';
+        return "<div class='canvas-integration'>
+                <img src='{$img}' alt='This tool has Canvas integration.'>
+                This tool is available in Canvas.
+            </div>";
+    }
+}
+
 
 function dlinq_video_playlists(){
     $html = '';

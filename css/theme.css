@@ -16235,6 +16235,18 @@ h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
   color: #fff;
 }
 
+.canvas-integration {
+  padding: 20px;
+  background-color: #e5f1fa;
+  margin-top: 20px;
+}
+
+.canvas-integration img {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+}
+
 .search-field:focus {
   box-shadow: none;
 }

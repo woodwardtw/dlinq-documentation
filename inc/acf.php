@@ -278,7 +278,6 @@ function dlinq_video_buttons(){
 
         // Loop through rows.
         while( have_rows('chapters') ) : the_row();
-
             // Load sub field value.
             $title = get_sub_field('title');
             $time = get_sub_field('start_time');

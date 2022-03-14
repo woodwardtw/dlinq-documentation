@@ -26,9 +26,9 @@ defined( 'ABSPATH' ) || exit;
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content playlist-content">
-		<?php echo dlinq_video_embed();?>
-		<?php echo dlinq_video_buttons();?>
 		<?php
+		echo dlinq_video_embed();
+		echo dlinq_video_buttons();
 		the_content();
 		understrap_link_pages();
 		?>

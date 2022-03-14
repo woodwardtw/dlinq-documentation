@@ -146,10 +146,14 @@ jumpButtons.forEach((button) => {
     let time = button.dataset.jump;
     let topic = button.dataset.topic;
     jumpTime(time);   
-    changeResources(topic, chapterData);
+    //changeResources(topic, chapterData);
+    appendTimeToUrl(time)
   });
 });
 
+function appendTimeToUrl(time){
+ window.history.replaceState(null, null, "?time="+time);
+}
 
 function changeResources(topic, chapterData){
   let box = document.getElementById('resources');

@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content playlist-content">
-
+		<div id="player"></div>
 		<?php
 		the_content();
 		understrap_link_pages();

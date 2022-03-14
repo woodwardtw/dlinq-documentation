@@ -86,3 +86,92 @@ jQuery('#doc-btn-expand-collapse').click(function(e) {
       button.innerHTML = 'x'
   }
 });
+
+if(document.getElementById('player')){
+   var embedApi;
+        function onPanoptoEmbedApiReady()
+        {
+            embedApi = new EmbedApi("player", {
+                width: "750",
+                height: "422",
+                //This is the URL of your Panopto site
+                serverName: "midd.hosted.panopto.com",
+                sessionId: "cdd030b7-7bfa-4643-8589-ae280111fc2b",
+                videoParams: { 
+                    interactivity: "true",
+                    showtitle: "false",
+                    offerviewer: "false",
+                    showbrand: "false",
+                    hideoverlay: "false",
+                    autoplay: "false",
+                    start: 0,
+                  
+                },
+                events: {
+                    "onIframeReady": onPanoptoIframeReady,
+                    "onReady": onPanoptoVideoReady,
+                    //"onStateChange": onPanoptoStateUpdate
+                }
+            });
+        }
+
+          //The API will call this function when the iframe is ready
+        function onPanoptoIframeReady()
+        {
+            // The iframe is ready and the video is not yet loaded (on the splash screen)
+            // Load video will begin playback
+            embedApi.loadVideo();
+        }
+
+function onPanoptoVideoReady(){
+  //alert('alert');
+  console.log(embedApi.unmuteVideo());
+}
+  
+
+function jumpTime(seconds){
+  embedApi.seekTo(seconds);
+  console.log(embedApi.playVideo());
+  console.log(embedApi.unmuteVideo());
+  console.log('mute? ' + embedApi.isMuted())
+  console.log('v? ' + embedApi.getVolume())
+}
+
+let jumpButtons = document.querySelectorAll('.jump-button');
+
+jumpButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    let time = button.dataset.jump;
+    let topic = button.dataset.topic;
+    jumpTime(time);   
+    changeResources(topic, chapterData);
+  });
+});
+
+
+function changeResources(topic, chapterData){
+  let box = document.getElementById('resources');
+  let data = chapterData.find(o => o.slug === topic);
+  let title = data.title
+  let content = data.content;
+  console.log(title)
+  box.innerHTML = `<h2>${title}</h2> <p>${content}</p>`;
+  box.removeAttribute("class")
+  box.classList.add(topic);
+  
+}
+
+const chapterData = [
+  {
+  "slug" : "something-else",
+  "content" : "Here are words that go with something else and a <a href='https://middcreate.net'>link</a>",
+  "title" : "Something Else"
+},
+  {
+  "slug" : "communal-notes",
+  "content" : "Here are words that go with communal notes.",
+  "title" : "Communal Notes"
+}
+                    
+                    ];
+}

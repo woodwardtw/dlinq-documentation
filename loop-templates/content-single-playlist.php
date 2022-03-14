@@ -27,6 +27,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="entry-content playlist-content">
 		<?php echo dlinq_video_embed();?>
+		<?php echo dlinq_video_buttons();?>
 		<?php
 		the_content();
 		understrap_link_pages();

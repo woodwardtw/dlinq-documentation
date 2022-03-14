@@ -272,6 +272,26 @@ function dlinq_video_embed(){
     return "<div id='player' data-videoid='{$video_id}'></div>";
 }
 
+function dlinq_video_buttons(){
+    $html = '';
+    if( have_rows('chapters') ):
+
+        // Loop through rows.
+        while( have_rows('chapters') ) : the_row();
+
+            // Load sub field value.
+            $title = get_sub_field('title');
+            $time = get_sub_field('start_time');
+            $html .= "<button class='jump-button' data-jump='{$time}'>{$title}</button>";
+       // End loop.
+        endwhile;
+        return $html;
+        // No value.
+        else :
+            // Do something...
+        endif;
+}
+
 function dlinq_video_playlists(){
     $html = '';
     if(get_field('playlists')){

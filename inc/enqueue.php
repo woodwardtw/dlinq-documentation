@@ -28,6 +28,9 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+		if(get_post_type( get_the_ID() ) == 'playlist'){
+			wp_enqueue_script('panopto embed', 'https://developers.panopto.com/scripts/embedapi.min.js', array(), '', true);
+		}
 	}
 } // End of if function_exists( 'understrap_scripts' ).
 

@@ -88,6 +88,8 @@ jQuery('#doc-btn-expand-collapse').click(function(e) {
 });
 
 if(document.getElementById('player')){
+  const player = document.getElementById('player');
+  const videoId = player.dataset.videoid;
    var embedApi;
         function onPanoptoEmbedApiReady()
         {
@@ -96,7 +98,7 @@ if(document.getElementById('player')){
                 height: "422",
                 //This is the URL of your Panopto site
                 serverName: "midd.hosted.panopto.com",
-                sessionId: "cdd030b7-7bfa-4643-8589-ae280111fc2b",
+                sessionId: videoId,
                 videoParams: { 
                     interactivity: "true",
                     showtitle: "false",

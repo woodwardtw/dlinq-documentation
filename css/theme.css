@@ -17417,4 +17417,13 @@ h2:target, .h2:target, h3:target, .h3:target, h4:target, .h4:target, ol:target, 
   width: 100%;
 }
 
+.playlist-main .entry-meta {
+  padding-left: 10px;
+}
+
+.video-content h2, .video-content .h2 {
+  margin-left: 0;
+  padding-left: 0;
+}
+
 /*# sourceMappingURL=theme.css.map */

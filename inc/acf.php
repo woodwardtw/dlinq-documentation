@@ -269,7 +269,7 @@ function dlinq_video_embed(){
     $url_components = parse_url($url);
     parse_str($url_components['query'], $params);
     $video_id = $params['id'];
-    return "<div id='player' data-videoid='{$video_id}'></div>";
+    return "<div class='col-md-7'><div id='player' data-videoid='{$video_id}'></div></div>";
 }
 
 function dlinq_video_buttons(){
@@ -284,7 +284,7 @@ function dlinq_video_buttons(){
             $html .= "<button class='jump-button' data-jump='{$time}'>{$title}</button>";
        // End loop.
         endwhile;
-        return $html;
+        return "<div class='col-md-2'>{$html}</div>";
         // No value.
         else :
             // Do something...

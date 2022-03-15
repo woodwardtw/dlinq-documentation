@@ -252,13 +252,15 @@ function dlinq_canvas_integration(){
 
 function dlinq_extra_links(){
     $html = '';
+    $privacy_img = get_stylesheet_directory_uri(). '/imgs/privacy.svg';
+    $accessibility_img = get_stylesheet_directory_uri(). '/imgs/accessibility.svg';
     if(get_field('privacy_statement_link')){
         $privacy = get_field('privacy_statement_link');
-        $html .= "<div><a href='{$privacy}' class='privacy-link'>Privacy Statement</a></div>";
+        $html .= "<div class='privacy'><img src='{$privacy_img}' alt='Privacy icon.'><a href='{$privacy}' class='privacy-link'>Privacy Statement</a></div>";
     }
      if(get_field('accessibility_statement_link')){
         $accessibility = get_field('accessibility_statement_link');
-        $html .= "<div><a href='{$accessibility}' class='accessibility-link'>Accessibility Statement</a></div>";
+        $html .= "<div class='accessibility'><img src='{$accessibility_img}' alt='Accessibility icon.'><a href='{$accessibility}' class='accessibility-link'>Accessibility Statement</a></div>";
         }
     return $html;
 }

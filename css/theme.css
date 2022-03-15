@@ -17237,17 +17237,17 @@ h2:target, .h2:target, h3:target, .h3:target, h4:target, .h4:target, ol:target, 
   color: #fff;
 }
 
-.canvas-integration {
+.canvas-integration, .privacy, .accessibility {
   padding: 20px;
   background-color: #e5f1fa;
   margin-top: 20px;
   border-radius: 5px;
 }
 
-.canvas-integration img {
+.canvas-integration img, .privacy img, .accessibility img {
   width: 70px;
   height: 70px;
-  margin: 0 auto;
+  margin: 0 20px 0 0;
 }
 
 .search-field:focus {

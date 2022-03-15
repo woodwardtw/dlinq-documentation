@@ -318,3 +318,13 @@ to {background-color: green}
 .show {
 	display: block;
 }
+
+.video-content {
+    padding: 0 20px;
+    margin: 0 20px;
+}
+
+#player iframe {
+    max-width: 100%;
+    width: 100%;
+}

@@ -292,20 +292,20 @@ function dlinq_video_buttons(){
         endif;
 }
 
-// function dlinq_video_playlists(){
-//     $html = '';
-//     if(get_field('playlists')){
-//         $html .= '<div class="video-links"><h2>Video Playlists</h2><ol>';
-//          $playlists = get_field('playlists');
-//         foreach($playlists as $list){
-//             $title = $list->post_title;
-//             $link = get_permalink($list->ID);
-//             $html .= "<li><a href='{$link}'>{$title}</a></li>";
-//         }
-//         return $html . '</ol></div>';
-//     }
+function dlinq_video_playlists(){
+    $html = '';
+    if(get_field('playlists')){
+        $html .= '<div class="video-links"><h2>Video Playlists</h2><ol>';
+         $playlists = get_field('playlists');
+        foreach($playlists as $list){
+            $title = $list->post_title;
+            $link = get_permalink($list->ID);
+            $html .= "<li><a href='{$link}'>{$title}</a></li>";
+        }
+        return $html . '</ol></div>';
+    }
    
-// }
+}
 
 function dlinq_video_resources(){
     $html = '';

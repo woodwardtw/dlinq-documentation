@@ -15162,6 +15162,9 @@ h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
   width: 90%;
   margin: 10px;
   display: block;
+  border-radius: 40px;
+  background-color: black;
+  color: #fff;
 }
 
 .hide {

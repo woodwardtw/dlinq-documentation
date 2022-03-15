@@ -144,9 +144,9 @@ let jumpButtons = document.querySelectorAll('.jump-button');
 jumpButtons.forEach((button) => {
   button.addEventListener('click', () => {
     let time = button.dataset.jump;
-    let topic = button.dataset.topic;
+    let row = button.dataset.row;
     jumpTime(time);   
-    //changeResources(topic, chapterData);
+    changeResources(row);
     appendTimeToUrl(time)
   });
 });
@@ -155,16 +155,9 @@ function appendTimeToUrl(time){
  window.history.replaceState(null, null, "?time="+time);
 }
 
-function changeResources(topic, chapterData){
-  let box = document.getElementById('resources');
-  let data = chapterData.find(o => o.slug === topic);
-  let title = data.title
-  let content = data.content;
-  console.log(title)
-  box.innerHTML = `<h2>${title}</h2> <p>${content}</p>`;
-  box.removeAttribute("class")
-  box.classList.add(topic);
-  
+function changeResources(row){
+  let content = document.getElementById('video-content-'+row);
+  content.classList.add('show');
 }
 
 const chapterData = [

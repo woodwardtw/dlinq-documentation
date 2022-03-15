@@ -317,7 +317,7 @@ function dlinq_video_resources(){
             $title = get_sub_field('title');
             $content = get_sub_field('details');
             $row = get_row_index();
-            $html .= "<div class='video-content' id='video-content-{$row}'><h2>{$title}</h2>{$content}</div>";
+            $html .= "<div class='video-content hide' id='video-content-{$row}'><h2>{$title}</h2>{$content}</div>";
        // End loop.
         endwhile;
         return "<div class='col-md-4'>{$html}</div>";

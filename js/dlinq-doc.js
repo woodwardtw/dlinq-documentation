@@ -133,10 +133,8 @@ function onPanoptoVideoReady(){
 
 function jumpTime(seconds){
   embedApi.seekTo(seconds);
-  console.log(embedApi.playVideo());
-  console.log(embedApi.unmuteVideo());
-  console.log('mute? ' + embedApi.isMuted())
-  console.log('v? ' + embedApi.getVolume())
+  embedApi.playVideo();
+  embedApi.unmuteVideo();
 }
 
 let jumpButtons = document.querySelectorAll('.jump-button');
@@ -147,7 +145,7 @@ jumpButtons.forEach((button) => {
     let row = button.dataset.row;
     jumpTime(time);   
     changeResources(row);
-    appendTimeToUrl(time)
+    appendTimeToUrl(time);
   });
 });
 
@@ -156,21 +154,16 @@ function appendTimeToUrl(time){
 }
 
 function changeResources(row){
-  let content = document.getElementById('video-content-'+row);
-  content.classList.add('show');
+  const chosen = document.getElementById('video-content-'+row);
+  const allContent = document.querySelectorAll('.video-content');
+  allContent.forEach((contentBlock) => {
+  contentBlock.classList.remove('show');
+  contentBlock.classList.add('hide');
+});
+
+  chosen.classList.add('show');
+  chosen.classList.remove('hide');
 }
 
-const chapterData = [
-  {
-  "slug" : "something-else",
-  "content" : "Here are words that go with something else and a <a href='https://middcreate.net'>link</a>",
-  "title" : "Something Else"
-},
-  {
-  "slug" : "communal-notes",
-  "content" : "Here are words that go with communal notes.",
-  "title" : "Communal Notes"
-}
-                    
-                    ];
+
 }

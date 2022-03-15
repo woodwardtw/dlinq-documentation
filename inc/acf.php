@@ -130,7 +130,7 @@ function dlinq_teaching(){
             $link = get_sub_field('link');
             $html .= "<li><a href='{$link}'>{$title}</a></li>";
         endwhile;
-        return "<h3 id='teaching-resources'>Teaching with {$app_title}</h3><ul>{$html}</ul>";
+        return "<h2 id='teaching-resources'>Teaching with {$app_title}</h2><ul>{$html}</ul>";
         // No value.
         else :
             // Do something...

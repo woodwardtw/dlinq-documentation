@@ -278,7 +278,6 @@ to {background-color: green}
   }
 }
 
-
 .playlist-content {
 	margin: 50px 0;
 }
@@ -309,6 +308,13 @@ to {background-color: green}
 	border-radius: 40px;
 	background-color: black;
 	color: #fff;
+    border: none;
+    padding: 4px 6px;
+    transition: all .3s ease;
+}
+
+.jump-button:hover {
+    background-color: #424242;
 }
 
 .hide {

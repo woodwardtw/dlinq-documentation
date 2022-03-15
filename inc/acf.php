@@ -265,11 +265,14 @@ function dlinq_extra_links(){
 
 
 function dlinq_video_embed(){
-    $url = get_field('panopto_video_url');
-    $url_components = parse_url($url);
-    parse_str($url_components['query'], $params);
-    $video_id = $params['id'];
-    return "<div class='col-md-6'><div id='player' data-videoid='{$video_id}'></div></div>";
+    if(get_field('panopto_video_url')){
+        $url = get_field('panopto_video_url');
+        $url_components = parse_url($url);
+        parse_str($url_components['query'], $params);
+        $video_id = $params['id'];
+        return "<div class='col-md-6'><div id='player' data-videoid='{$video_id}'></div></div>";
+    }
+   
 }
 
 function dlinq_video_buttons(){

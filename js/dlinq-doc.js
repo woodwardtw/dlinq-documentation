@@ -88,8 +88,8 @@ jQuery('#doc-btn-expand-collapse').click(function(e) {
 });
 
 if(document.getElementById('player')){
-  const player = document.getElementById('player');
-  const videoId = player.dataset.videoid;
+  let player = document.getElementById('player');
+  let videoId = player.dataset.videoid;
    var embedApi;
         function onPanoptoEmbedApiReady()
         {
@@ -154,11 +154,11 @@ function appendTimeToUrl(time){
 }
 
 function changeResources(row){
-  const chosen = document.getElementById('video-content-'+row);
-  const allContent = document.querySelectorAll('.video-content');
-  allContent.forEach((contentBlock) => {
-  contentBlock.classList.remove('show');
-  contentBlock.classList.add('hide');
+  let chosen = document.getElementById('video-content-'+row);
+  let allContent = document.querySelectorAll('.video-content');
+    allContent.forEach((contentBlock) => {
+    contentBlock.classList.remove('show');
+    contentBlock.classList.add('hide');
 });
 
   chosen.classList.add('show');

@@ -16377,4 +16377,15 @@ h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
   background-color: #fff;
 }
 
+.playlist-main {
+  width: 100%;
+  margin: 0 40px;
+}
+
+.jump-button {
+  width: 90%;
+  margin: 10px;
+  display: block;
+}
+
 /*# sourceMappingURL=theme.css.map */

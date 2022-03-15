@@ -25,10 +25,11 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-	<div class="entry-content playlist-content row">
+	<div class="playlist-content row">
 		<?php
 		echo dlinq_video_buttons();
 		echo dlinq_video_embed();
+		echo dlinq_video_resources();
 		the_content();
 		understrap_link_pages();
 		?>

@@ -4,7 +4,7 @@
 // handle links with @href started with '#' only
 jQuery(document).on('click', 'a[href^="#"]', function(e) {
     // target element id
-    console.log('click')
+    console.log('click');
     var id = jQuery(this).attr('href');
 
     // target element
@@ -24,8 +24,8 @@ jQuery(document).on('click', 'a[href^="#"]', function(e) {
 });
 
 if (document.querySelectorAll('.direct-link')){
-	let directLinks = document.querySelectorAll('.direct-link')
-	console.log(directLinks)
+	let directLinks = document.querySelectorAll('.direct-link');
+	console.log(directLinks);
 	directLinks.forEach((button) => {
 	  button.addEventListener('click', () => {
 	    console.log(button.dataset.url);
@@ -77,21 +77,20 @@ function fallbackCopyTextToClipboard(text) {
 }
 
 jQuery('#doc-btn-expand-collapse').click(function(e) {
-  console.log('clack')
   jQuery('#navbar-documentation').toggleClass('collapsed');
   let button = document.querySelector('#doc-btn-expand-collapse');
   if(button.innerHTML === 'x'){
-      button.innerHTML = '+'
+      button.innerHTML = '+';
   } else {
-      button.innerHTML = 'x'
+      button.innerHTML = 'x';
   }
 });
 
 if(document.getElementById('player')){
   let player = document.getElementById('player');
   let videoId = player.dataset.videoid;
-   var embedApi;
-        function onPanoptoEmbedApiReady()
+  var embedApi;
+  function onPanoptoEmbedApiReady()
         {
             embedApi = new EmbedApi("player", {
                 width: "750",
@@ -116,18 +115,20 @@ if(document.getElementById('player')){
                 }
             });
         }
+}
 
+
+ 
           //The API will call this function when the iframe is ready
-        function onPanoptoIframeReady()
-        {
-            // The iframe is ready and the video is not yet loaded (on the splash screen)
-            // Load video will begin playback
-            embedApi.loadVideo();
-        }
+function onPanoptoIframeReady(){
+        // The iframe is ready and the video is not yet loaded (on the splash screen)
+        // Load video will begin playback
+        embedApi.loadVideo();
+    }
 
 function onPanoptoVideoReady(){
   //alert('alert');
-  console.log(embedApi.unmuteVideo());
+  embedApi.unmuteVideo();
 }
   
 
@@ -136,6 +137,8 @@ function jumpTime(seconds){
   embedApi.playVideo();
   embedApi.unmuteVideo();
 }
+
+
 
 let jumpButtons = document.querySelectorAll('.jump-button');
 
@@ -154,16 +157,15 @@ function appendTimeToUrl(time){
 }
 
 function changeResources(row){
-  let chosen = document.getElementById('video-content-'+row);
-  let allContent = document.querySelectorAll('.video-content');
-    allContent.forEach((contentBlock) => {
-    contentBlock.classList.remove('show');
-    contentBlock.classList.add('hide');
-});
+    let chosen = document.getElementById('video-content-'+row);
+    let allContent = document.querySelectorAll('.video-content');
+      allContent.forEach((contentBlock) => {
+      contentBlock.classList.remove('show');
+      contentBlock.classList.add('hide');
+  });
 
-  chosen.classList.add('show');
-  chosen.classList.remove('hide');
-}
+    chosen.classList.add('show');
+    chosen.classList.remove('hide');
+  }
 
 
-}

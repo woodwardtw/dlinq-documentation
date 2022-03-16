@@ -86,9 +86,11 @@ jQuery('#doc-btn-expand-collapse').click(function(e) {
   }
 });
 
+
 if(document.getElementById('player')){
   let player = document.getElementById('player');
-  let videoId = player.dataset.videoid;
+  var videoId = player.dataset.videoid;
+  console.log(videoId);
   var embedApi;
   function onPanoptoEmbedApiReady()
         {
@@ -158,7 +160,7 @@ let jumpButtons = document.querySelectorAll('.jump-button');
 
 jumpButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    let time = button.dataset.jump;
+    let time = button.dataset.start;
     if(button.dataset.end>0){
       var end = button.dataset.end;
     } else {
@@ -200,7 +202,7 @@ function checkForTime(){
 }
 
 function showContentUrl(time){
-  let button = document.querySelector('[data-jump="'+time+'"]');
+  let button = document.querySelector('[data-start="'+time+'"]');
   let row = button.dataset.row;
   changeResources(row);
 }

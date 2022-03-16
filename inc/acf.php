@@ -292,7 +292,7 @@ function dlinq_video_buttons(){
             }
 
             $row = get_row_index();
-            $html .= "<button class='jump-button' data-jump='{$start_time}' {$end} data-row='{$row}'>{$title}</button>";
+            $html .= "<button class='jump-button' data-start='{$start_time}' {$end} data-row='{$row}'>{$title}</button>";
        // End loop.
         endwhile;
         return "<div class='col-md-2'>{$html}</div>";

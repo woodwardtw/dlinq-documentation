@@ -129,6 +129,7 @@ function onPanoptoIframeReady(){
 function onPanoptoVideoReady(){
   //alert('alert');
   embedApi.unmuteVideo();
+  checkForTime();//jump playhead based on URL
 }
   
 
@@ -156,6 +157,8 @@ function appendTimeToUrl(time){
  window.history.replaceState(null, null, "?time="+time);
 }
 
+
+
 function changeResources(row){
     let chosen = document.getElementById('video-content-'+row);
     let allContent = document.querySelectorAll('.video-content');
@@ -168,4 +171,25 @@ function changeResources(row){
     chosen.classList.remove('hide');
   }
 
+function checkForTime(){
+  if(getUrlVars()["time"]>0){
+    const time = getUrlVars()["time"];
+    embedApi.seekTo(time);
+    embedApi.unmuteVideo();
+    showContentUrl(time);
+  }
+}
 
+function showContentUrl(time){
+  let button = document.querySelector('[data-jump="'+time+'"]');
+  let row = button.dataset.row;
+  changeResources(row);
+}
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}

@@ -133,12 +133,25 @@ function onPanoptoVideoReady(){
 }
   
 
-function jumpTime(seconds){
+function jumpTime(seconds, end){
   embedApi.seekTo(seconds);
   embedApi.playVideo();
   embedApi.unmuteVideo();
+  stopVideo(embedApi,seconds,end);
 }
 
+function stopVideo(embedApi,seconds,end){
+  if(end > 0){
+     let duration = (end-seconds)*1000;
+     console.log(duration);
+    setTimeout(function(){ 
+      embedApi.stopVideo();
+      embedApi.seekTo(end);
+      }, duration); 
+      
+  }
+ 
+}
 
 
 let jumpButtons = document.querySelectorAll('.jump-button');
@@ -146,8 +159,14 @@ let jumpButtons = document.querySelectorAll('.jump-button');
 jumpButtons.forEach((button) => {
   button.addEventListener('click', () => {
     let time = button.dataset.jump;
+    if(button.dataset.end>0){
+      var end = button.dataset.end;
+    } else {
+      var end = 0;
+    }
+    
     let row = button.dataset.row;
-    jumpTime(time);   
+    jumpTime(time, end);   
     changeResources(row);
     appendTimeToUrl(time);
   });

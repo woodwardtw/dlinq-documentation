@@ -285,9 +285,14 @@ function dlinq_video_buttons(){
         while( have_rows('chapters') ) : the_row();
             // Load sub field value.
             $title = get_sub_field('title');
-            $time = get_sub_field('start_time');
+            $start_time = get_sub_field('start_time');
+            if(get_sub_field('end_time')){
+                $end_time = get_sub_field('end_time');
+                $end = "data-end='{$end_time}' ";
+            }
+
             $row = get_row_index();
-            $html .= "<button class='jump-button' data-jump='{$time}' data-row='{$row}'>{$title}</button>";
+            $html .= "<button class='jump-button' data-jump='{$start_time}' {$end} data-row='{$row}'>{$title}</button>";
        // End loop.
         endwhile;
         return "<div class='col-md-2'>{$html}</div>";

@@ -26,4 +26,5 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 <?php echo dlinq_teaching();?>
 <?php echo dlinq_video_playlists();?>
 <?php echo dlinq_extra_links();?>
+<?php echo dlinq_article_subpages();?>
 </div><!-- #right-sidebar -->

@@ -17240,7 +17240,7 @@ h2:target, .h2:target, h3:target, .h3:target, h4:target, .h4:target, ol:target, 
 .canvas-integration, .privacy, .accessibility {
   padding: 20px;
   background-color: #e5f1fa;
-  margin-top: 20px;
+  margin-top: 40px;
   border-radius: 5px;
 }
 
@@ -17315,6 +17315,7 @@ h2:target, .h2:target, h3:target, .h3:target, h4:target, .h4:target, ol:target, 
 
 #right-sidebar h2, #right-sidebar .h2 {
   border-bottom: 2px solid #e5f1fa;
+  margin: 40px 0;
 }
 
 .direct-link.confirm {

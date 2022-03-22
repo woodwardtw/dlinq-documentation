@@ -165,9 +165,10 @@ h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
 .canvas-integration, .privacy, .accessibility {
 	padding: 20px;
 	background-color: $light-blue;
-	margin-top: 20px;
+	margin-top: 40px;
     border-radius: 5px;
 }
+
 
 .canvas-integration img, .privacy img, .accessibility img {
 	width: 70px;
@@ -243,6 +244,7 @@ h2:target, h3:target, h4:target, ol:target, ul:target, div:target {
 
 #right-sidebar h2 {
 	border-bottom: 2px solid $light-blue;
+	margin: 40px 0;
 }
 
 .direct-link.confirm {

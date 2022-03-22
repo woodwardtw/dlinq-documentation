@@ -37,7 +37,7 @@ defined( 'ABSPATH' ) || exit;
 		echo dlinq_help_section();
 		echo dlinq_internal_pages();
 		gravity_form( 1, false, false, false, null, true );
-		understrap_link_pages();
+		//understrap_link_pages();
 		?>
 
 	</div><!-- .entry-content -->

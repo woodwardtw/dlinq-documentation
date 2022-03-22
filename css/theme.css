@@ -17313,6 +17313,10 @@ h2:target, .h2:target, h3:target, .h3:target, h4:target, .h4:target, ol:target, 
   border-radius: 5px;
 }
 
+#right-sidebar {
+  padding-left: 40px;
+}
+
 #right-sidebar h2, #right-sidebar .h2 {
   border-bottom: 2px solid #e5f1fa;
   margin: 40px 0;

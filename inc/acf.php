@@ -38,7 +38,7 @@ function dlinq_documentation_nav(){
         // Loop through rows.
         while( have_rows('sections') ) : the_row();
             // Load sub field value.
-            $html .= "<ul>";
+            //$html .= "<ul>";
             if(get_sub_field('section_title')){
                 $title = get_sub_field('section_title');
                 $id = sanitize_title($title);
@@ -47,7 +47,7 @@ function dlinq_documentation_nav(){
                 $title_nav = "<a href='{$page_url}#{$id}{$row}'>{$title}</a>";
                 $html .= "<li>{$title_nav}</li>";
             }     
-            $html .= "</ul>";
+           // $html .= "</ul>";
         endwhile;
         if(get_field('teaching_resources')){
             $html .= "<li><a href='#teaching-resources'>Teaching Resources</a></li>";

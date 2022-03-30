@@ -42,7 +42,7 @@
         },
         {
             "key": "field_61d5d093f05f9",
-            "label": "Canvas Integration",
+            "label": "Canvas integration",
             "name": "canvas_integration",
             "type": "radio",
             "instructions": "",
@@ -85,7 +85,7 @@
             "sub_fields": [
                 {
                     "key": "field_615f195ccda01",
-                    "label": "Section Title",
+                    "label": "Section title",
                     "name": "section_title",
                     "type": "text",
                     "instructions": "If you don't need one, just leave it blank. They will be part of an auto-created navigation.",
@@ -104,7 +104,7 @@
                 },
                 {
                     "key": "field_615f198dcda02",
-                    "label": "Section Content",
+                    "label": "Section content",
                     "name": "section_content",
                     "type": "wysiwyg",
                     "instructions": "",
@@ -123,7 +123,7 @@
                 },
                 {
                     "key": "field_615f19b69660e",
-                    "label": "Callout Type",
+                    "label": "Callout type",
                     "name": "callout_type",
                     "type": "radio",
                     "instructions": "This gives a special visual separator for the content. You won't use it most of the time.",
@@ -151,7 +151,7 @@
         },
         {
             "key": "field_61d5d2e3b4817",
-            "label": "Teaching Resources",
+            "label": "Teaching resources",
             "name": "teaching_resources",
             "type": "repeater",
             "instructions": "",
@@ -207,7 +207,7 @@
         },
         {
             "key": "field_615f2badde9ec",
-            "label": "Related Internal Pages",
+            "label": "Related internal pages",
             "name": "related_internal_pages",
             "type": "repeater",
             "instructions": "",
@@ -263,7 +263,7 @@
         },
         {
             "key": "field_615de61327e7c",
-            "label": "Related External Documents",
+            "label": "Related external documents",
             "name": "related_external_documents",
             "type": "repeater",
             "instructions": "",
@@ -319,7 +319,7 @@
         },
         {
             "key": "field_617c0769e2caa",
-            "label": "Help Section",
+            "label": "Help section",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -368,7 +368,7 @@
         },
         {
             "key": "field_618d7d8eab9f9",
-            "label": "Reviews Section",
+            "label": "Reviews section",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -473,5 +473,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1647029874
+    "modified": 1648664028
 }

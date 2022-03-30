@@ -110,8 +110,7 @@ function dlinq_internal_pages(){
             $html .= "<li><a href='{$link}'>{$title}</a></li>";
         endwhile;
         $internal = "<h3>Middlebury Resources</h3><ul>{$html}</ul>";
-        $external = dlinq_external_pages();
-        return "<div class='doc-nav'><h2 id='learn-more'>Learn More</h2>{$internal}{$external}</div>";
+        return "<div class='doc-nav'><h2 id='learn-more'>Learn More</h2>{$internal}</div>";
          else :
             // Do something...
         endif;

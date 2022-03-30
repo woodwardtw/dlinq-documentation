@@ -149,8 +149,8 @@ function dlinq_external_pages(){
             $link = get_sub_field('link');
             $html .= "<li><a href='{$link}'>{$title}</a></li>";
         endwhile;
-        return "<h3>External Resources</h3><ul>{$html}</ul>";
-        // No value.
+        return "<div class='doc-nav'><h2 id='extermal-resources'>External Resources</h2><ul>{$html}</ul></div>";
+        // No value.e
         else :
             // Do something...
         endif;

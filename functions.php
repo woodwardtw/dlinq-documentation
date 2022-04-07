@@ -46,7 +46,7 @@ foreach ( $understrap_includes as $file ) {
 	require_once get_theme_file_path( $understrap_inc_dir . $file );
 }
 
-
+//https://www.relevanssi.com/knowledge-base/multisite-search/
 add_action( 'the_post', 'rlv_switch_blog' );
 /**
  * Switches the blog if necessary.

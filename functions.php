@@ -76,3 +76,38 @@ function rlv_switch_blog( $post ) {
 		$relevanssi_blog_id = $post->blog_id;
 	}
 }
+
+add_filter( 'relevanssi_post_ok', 'rlv_no_past_events', 10, 2 );
+add_filter( 'relevanssi_indexing_restriction', 'rlv_exclude_past_events' );
+
+/**
+ * Blocks past events from search results.
+ *
+ * @param boolean $status  Should the post be searched or not?
+ * @param int     $post_id The post ID.
+ *
+ * @return boolean Return false if the event has passed.
+ */
+function rlv_no_past_events( $status, $post_id ) {
+	$end_date = get_post_meta( $post_id, '_EventEndDate', true );
+	if ( $end_date ) {
+		if ( strtotime( $end_date ) < time() ) {
+			$status = false;
+		}
+	}
+	return $status;
+}
+
+/**
+ * Removes past events from indexing.
+ *
+ * @param array $restriction The MySQL restriction and an explanation.
+ *
+ * @return array The restriction set with event restriction included.
+ */
+function rlv_exclude_past_events( $restriction ) {
+	global $wpdb;
+	$restriction['mysql']  .= " AND post.ID NOT IN (SELECT post_id FROM $wpdb->postmeta WHERE meta_key = '_EventEndDate' AND meta_value < NOW())";
+	$restriction['reason'] .= ' Past event';
+	return $restriction;
+}

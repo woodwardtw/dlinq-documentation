@@ -45,3 +45,34 @@ if ( class_exists( 'Jetpack' ) ) {
 foreach ( $understrap_includes as $file ) {
 	require_once get_theme_file_path( $understrap_inc_dir . $file );
 }
+
+
+add_action( 'the_post', 'rlv_switch_blog' );
+/**
+ * Switches the blog if necessary.
+ *
+ * If the current post blog is different than the current blog, switches the blog.
+ * If the blog has been switched, makes sure it's restored first to keep the switch
+ * stack clean.
+ *
+ * @param WP_Post $post The post object.
+ */
+function rlv_switch_blog( $post ) {
+	global $relevanssi_blog_id, $relevanssi_original_blog_id;
+    
+    if ( ! isset( $post->blog_id ) ) {
+    	return;
+    }
+
+	if ( ! isset( $relevanssi_original_blog_id ) ) {
+		$relevanssi_original_blog_id = get_current_blog_id();
+	}
+
+	if ( $post->blog_id !== get_current_blog_id() ) {
+		if ( isset( $relevanssi_blog_id ) && $relevanssi_blog_id !== $post->blog_id ) {
+			restore_current_blog();
+		}
+		switch_to_blog( $post->blog_id );
+		$relevanssi_blog_id = $post->blog_id;
+	}
+}

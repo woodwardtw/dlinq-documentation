@@ -227,11 +227,15 @@ function dlinq_help_section(){
     $page_url = get_permalink();
     $its_link = get_field('technical_support_link');
     $dlinq_link = get_field('pedagogical_support_link');
+    $override = get_field('technical_support_override');
+    $tech_statement = "<p>For technical support for {$title}, <a href='https://support.gmhec.org/TDClient/47/middlebury/Shared/Search/?c=all&s={$title}'>search the ITS Knowledge Base</a> or <a href='{$its_link}'>submit a help ticket here</a>.</p>";
+    if ($override){
+        $tech_statement = $override;
+    }
     $html = 
             "<div id='help' class='section important'>
                     <h2 id='header-help'>Need help?</h2><button class='direct-link' data-url='{$page_url}#help'>copy link</button>
-                <p>For technical support for {$title}, <a href='https://support.gmhec.org/TDClient/47/middlebury/Shared/Search/?c=all&s={$title}'>search the ITS Knowledge Base</a> or <a href='{$its_link}'>submit a help ticket here</a>.</p>
-
+                    {$tech_statement}
                 <p>For pedagogical support for {$title}, <a href='{$dlinq_link}'>schedule a consultation with a DLINQ team member</a>.</p>                
 
             </div>";

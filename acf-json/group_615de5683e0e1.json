@@ -351,6 +351,25 @@
             "placeholder": ""
         },
         {
+            "key": "field_624eea0121fcd",
+            "label": "Technical Support Override",
+            "name": "technical_support_override",
+            "type": "wysiwyg",
+            "instructions": "If you want to point to support outside the normal Middlebury channels, this is the place to do it. It will replace the standard text with whatever you put here. \r\n\r\nIt will replace \"For technical support for Middlebury Google Apps, search the ITS Knowledge Base or submit a help ticket here.\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_617c0b51f4a37",
             "label": "Pedagogical support link",
             "name": "pedagogical_support_link",
@@ -473,5 +492,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1648664028
+    "modified": 1649338985
 }

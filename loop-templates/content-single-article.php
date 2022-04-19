@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-
+			<?php printf( __( 'Last modified: %s', 'textdomain' ), get_the_modified_date() ); ?>
 			<?php //understrap_posted_on(); ?>
 
 		</div><!-- .entry-meta -->

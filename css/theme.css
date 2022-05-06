@@ -17355,11 +17355,18 @@ h2:target, .h2:target, h3:target, .h3:target, h4:target, .h4:target, ol:target, 
 
 #search-wrapper h2 a, #search-wrapper .h2 a {
   transition: all 0.4s ease;
+  display: block;
 }
 
 #search-wrapper h2 a:hover, #search-wrapper .h2 a:hover, #search-wrapper h2 a:hover .entry-summary, #search-wrapper .h2 a:hover .entry-summary {
   padding-left: 15px;
   color: #424242;
+}
+
+#search-wrapper .entry-meta {
+  margin: 8px 0 14px 0;
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 #search-wrapper .understrap-read-more-link {

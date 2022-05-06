@@ -216,9 +216,9 @@ function dlinq_article_subpages(){
 function dlinq_acf_search(){
     global $post;
     if($post->post_type == 'article'){
-        return 'article';
+        return get_field('overview');
     } else {
-        return 'not';
+        return get_the_excerpt();
     }
 }
 

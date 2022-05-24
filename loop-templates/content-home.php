@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6 offset-md-3 home-description">
+			<div class="col-md-8 offset-md-2 home-description">
 				<?php the_content();?>
 			</div>
 		</div>

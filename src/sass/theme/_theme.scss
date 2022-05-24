@@ -326,6 +326,33 @@ to {background-color: green}
   }
 }
 
+
+.section ul,.section li,.section ol {
+	    font-family: Open Sans,tahoma,geneva,sans-serif;
+    font-size: 1.1rem;
+}
+
+.home-description p {
+	font-size: 1.3rem;
+	margin: 30px 0;
+	background-color: #efefef;
+	padding: 20px 20px 20px 0;
+	border-radius: 8px;
+}
+
+//list tools
+.app-title {
+	font-size: 1.8rem;
+	display: block;
+	font-weight: 800;
+}
+
+.app-box {
+	padding: 20px 30px;
+	margin: 20px 0;
+}
+
+
 .playlist-content {
 	margin: 50px 0;
 }

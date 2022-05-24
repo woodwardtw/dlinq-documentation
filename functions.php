@@ -111,3 +111,30 @@ function rlv_exclude_past_events( $restriction ) {
 	$restriction['reason'] .= ' Past event';
 	return $restriction;
 }
+
+function dlinq_doc_list_top_articles(){
+	$args = array(
+		'post_type' => 'article',
+		'post_status' => 'publish',
+		'posts_per_page' => -1,
+		'order' => 'ASC',
+		'orderby' => 'title',
+		'post_parent' => 0
+	);
+
+	$the_query = new WP_Query( $args );
+
+	// The Loop
+	if ( $the_query->have_posts() ) :
+	while ( $the_query->have_posts() ) : $the_query->the_post();
+	  // Do Stuff
+		$link = get_permalink();
+		echo "<a href='" . $link . "'>" . get_the_title() . '</a><br>';
+	endwhile;
+	endif;
+
+	// Reset Post Data
+	wp_reset_postdata();
+}
+
+add_shortcode( 'list-articles', 'dlinq_doc_list_top_articles' );

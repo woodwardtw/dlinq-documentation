@@ -342,14 +342,15 @@ to {background-color: green}
 
 //list tools
 .app-title {
-	font-size: 1.8rem;
+	font-size: 1.4rem;
 	display: block;
-	font-weight: 800;
+	font-weight: 400;
 }
 
 .app-box {
-	padding: 20px 30px;
-	margin: 20px 0;
+	padding: 10px 30px;
+	background-color: $light-blue;
+	margin: 0;
 }
 
 

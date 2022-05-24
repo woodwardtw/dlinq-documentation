@@ -17420,14 +17420,15 @@ h2:target, .h2:target, h3:target, .h3:target, h4:target, .h4:target, ol:target, 
 }
 
 .app-title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   display: block;
-  font-weight: 800;
+  font-weight: 400;
 }
 
 .app-box {
-  padding: 20px 30px;
-  margin: 20px 0;
+  padding: 10px 30px;
+  background-color: #e5f1fa;
+  margin: 0;
 }
 
 .playlist-content {

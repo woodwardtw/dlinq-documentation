@@ -129,7 +129,7 @@ function dlinq_doc_list_top_articles(){
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 	  // Do Stuff
 		$link = get_permalink();
-		echo "<div class='app-box'><a class='app-title' href='" . $link . "'>" . get_the_title() . "</a>" . get_field('overview') . "</div>";
+		echo "<div class='app-box'><a class='app-title' href='" . $link . "'>" . get_the_title() . "</a></div>";
 	endwhile;
 	endif;
 

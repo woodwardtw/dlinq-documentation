@@ -33,6 +33,12 @@ defined( 'ABSPATH' ) || exit;
 		<div class="row highlights justify-content-center">
 			<?php echo dlinq_highlight_repeater();?>
 		</div>
+		<div class="row">
+				<div class="col-md-6 offset-md-3 all-tools">
+					<h2>All Tools</h2>
+					<?php dlinq_doc_list_top_articles();?>
+				</div>
+		</div>
 
 	</div><!-- .entry-content -->
 
